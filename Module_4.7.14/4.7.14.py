@@ -1,4 +1,22 @@
+class Pet:
+    names = []
 
+    @classmethod
+    def first_pet(cls):
+        return cls.names
+    
+    @classmethod
+    def last_pet(cls):
+        return cls.names
+    
+    @classmethod
+    def num_of_pets(cls):
+        return len(cls.names)
+    
+    def __init__(self, name):
+        self.name = name
+        Pet.names.append(self)
+        
 
 
 # INPUT DATA:
@@ -17,30 +35,30 @@ print(Pet.first_pet().name)
 print(Pet.last_pet().name)
 print(Pet.num_of_pets())
 
-# TEST_3:
-names = ['Mia', 'Tutti', 'Erin', 'Loki', 'Kelly', 'Hussy', 'Abbey', 'Luna', 'Isha', 'Diva', 'Brandy', 'Petra', 'Mandy', 'Baby', 'Caitlyn', 'Taffy', 'Odie', 'Roxxy', 'Gabby', 'Shelby', 'Dolly', 'Ashley', 'Vanilla', 'Cori']
+# # TEST_3:
+# names = ['Mia', 'Tutti', 'Erin', 'Loki', 'Kelly', 'Hussy', 'Abbey', 'Luna', 'Isha', 'Diva', 'Brandy', 'Petra', 'Mandy', 'Baby', 'Caitlyn', 'Taffy', 'Odie', 'Roxxy', 'Gabby', 'Shelby', 'Dolly', 'Ashley', 'Vanilla', 'Cori']
 
-for name in names:
-    pet = Pet(name)
+# for name in names:
+#     pet = Pet(name)
 
-print(Pet.first_pet().name)
-print(Pet.last_pet().name)
-print(Pet.num_of_pets())
+# print(Pet.first_pet().name)
+# print(Pet.last_pet().name)
+# print(Pet.num_of_pets())
 
-# TEST_4:
-pet = Pet('Кемаль')
+# # TEST_4:
+# pet = Pet('Кемаль')
 
-print(Pet.first_pet().name)
-print(Pet.last_pet().name)
-print(Pet.num_of_pets())
+# print(Pet.first_pet().name)
+# print(Pet.last_pet().name)
+# print(Pet.num_of_pets())
 
-# TEST_5:
-pet1 = Pet('Ratchet')
-pet2 = Pet('Clank')
-pet3 = Pet('Rivet')
-pet4 = Pet('Ratchet')
-pet5 = Pet('Ratchet')
+# # TEST_5:
+# pet1 = Pet('Ratchet')
+# pet2 = Pet('Clank')
+# pet3 = Pet('Rivet')
+# pet4 = Pet('Ratchet')
+# pet5 = Pet('Ratchet')
 
-print(Pet.first_pet().name)
-print(Pet.last_pet().name)
-print(Pet.num_of_pets())
+# print(Pet.first_pet().name)
+# print(Pet.last_pet().name)
+# print(Pet.num_of_pets())

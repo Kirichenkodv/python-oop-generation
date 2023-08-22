@@ -1,3 +1,23 @@
+class StrExtension:
+
+    @staticmethod
+    def remove_vowels(string):
+        removed_chars = ('a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y')
+        return ''.join(filter(lambda x: x not in removed_chars, string))
+
+    @staticmethod
+    def leave_alpha(string):
+        return ''.join(x for x in list(string) if x.isalpha())
+        pass
+
+    @staticmethod
+    def replace_all(string, chars, char):
+    
+        for letter in chars:
+            string = string.replace(letter, char)
+        return string
+
+   
 
 
 
@@ -8,16 +28,16 @@ print(StrExtension.remove_vowels('Python'))
 print(StrExtension.remove_vowels('Stepik'))
 
 # # TEST_2:
-# print(StrExtension.leave_alpha('Python111'))
-# print(StrExtension.leave_alpha('__Stepik__()'))
+print(StrExtension.leave_alpha('Python111'))
+print(StrExtension.leave_alpha('__Stepik__()'))
 
 # # TEST_3:
-# print(StrExtension.replace_all('Python', 'Ptn', '-'))
-# print(StrExtension.replace_all('Stepik', 'stk', '#'))
+print(StrExtension.replace_all('Python', 'Ptn', '-'))
+print(StrExtension.replace_all('Stepik', 'stk', '#'))
 
 # # TEST_4:
-# print(StrExtension.remove_vowels('Success is the ability to go from failure to failure without losing your enthusiasm.'))
-# print(StrExtension.remove_vowels('Success is the ability to go from failure to failure without losing your enthusiasm.'.upper()))
+print(StrExtension.remove_vowels('Success is the ability to go from failure to failure without losing your enthusiasm.'))
+print(StrExtension.remove_vowels('Success is the ability to go from failure to failure without losing your enthusiasm.'.upper()))
 
 # # TEST_5:
 # print(StrExtension.leave_alpha('beegeek!\"#$%&\'()*+, -./:;<=>?@[\]^_`{|}~BEEGEEK'))
